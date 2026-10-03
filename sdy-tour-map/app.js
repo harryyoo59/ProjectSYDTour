@@ -22,7 +22,17 @@ const DATA = [
       },
       {
         name: "시드니 국내선(킹스포드 스미스)",
-        places: ["T2 국내선 터미널", "T3 국내선 터미널", "국내선 도착장"],
+        places: [
+          {
+            name: "T2 국내선 터미널",
+            // Sydney Airport T2 domestic (Jetstar/Virgin), landside hall.
+            // Wikidata Q57910603; inside OSM way 57010954.
+            mapsLat: -33.933998,
+            mapsLng: 151.179717,
+          },
+          "T3 국내선 터미널",
+          "국내선 도착장",
+        ],
       },
       {
         name: "내 차고지",
