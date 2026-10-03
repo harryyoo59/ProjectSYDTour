@@ -31,7 +31,13 @@ const DATA = [
             mapsLng: 151.179717,
           },
           "T3 국내선 터미널",
-          "국내선 도착장",
+          {
+            name: "국내선 도착장",
+            // West end of P3 Domestic Car Park, the pedestrian entrance
+            // toward the domestic terminal. OSM node 4839259275.
+            mapsLat: -33.9338383,
+            mapsLng: 151.1835716,
+          },
         ],
       },
       {
