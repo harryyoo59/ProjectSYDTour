@@ -1,13 +1,13 @@
 # 공통 규칙 (업데이트)
 
-0. **【강력 규칙 · 무조건】 컴퓨터 작업 화면 (세 프로젝트 공통)** – **매 대화·매 작업 시작 시** 다른 일보다 먼저, 채팅 **옆**에 해당 프로젝트 사이트를 **핸드폰 크기**(390×844)로 띄운다. 그 화면 이름은 **「컴퓨터」**. ProjectNL = project-nl-peach, ProjectH = project-h-fawn, ProjectSDYTour = 올리면 주소 적기(올리기 전엔 이 폴더 미리보기). 안 보이면 맥 작은 창으로도 연다. 질문만 와도 **생략 금지**. 사장님이 「큰 화면」이라고 직접 말할 때만 넓게.
+0. **【강력 규칙 · 무조건】 컴퓨터 작업 화면 (세 프로젝트 공통)** – **매 대화·매 작업 시작 시** 다른 일보다 먼저, 채팅 **옆**에 해당 프로젝트 사이트를 **핸드폰 크기**(390×844)로 띄운다. 그 화면 이름은 **「컴퓨터」**. ProjectNL = www.kainovelist.com, ProjectH = project-h-fawn, ProjectSYDTour = 올리면 주소 적기(올리기 전엔 이 폴더 미리보기). 안 보이면 맥 작은 창으로도 연다. 질문만 와도 **생략 금지**. 사장님이 「큰 화면」이라고 직접 말할 때만 넓게.
 
 0-1. **작업 끝 알림음** – 시킨 일(고치기·올리기·세팅)을 끝내고 보고할 때 짧은 종소리를 낸다. 사장님이 끝났는지 모르게 두지 않는다.
 
 1. **전 프로젝트 규칙 동기화** – AI Rule, Cursor 규칙을 업데이트할 때, 특정 프로젝트에만 국한되는 규칙이 아닌 이상 항상 모든 프로젝트에 동일하게 반영한다. 새 프로젝트를 만들 때도 `.cursor/rules/`와 `.agents/rules/USER_RULES.md`를 그대로 복사한다.
    - **ProjectH**: `/Users/harryyoo/Documents/ProjectH`
    - **ProjectNL**: `/Users/harryyoo/Documents/ProjectNL`
-   - **ProjectSDYTour**: `/Users/harryyoo/Documents/ProjectSDYTour` (세 프로젝트는 **같은 Documents 폴더**에 있음 — 한쪽만 보면 안 됨)
+   - **ProjectSYDTour**: `/Users/harryyoo/Documents/ProjectSYDTour` (세 프로젝트는 **같은 Documents 폴더**에 있음 — 한쪽만 보면 안 됨)
 
 2. **사장님께 보고하기 (가장 중요)** – 유저는 60대이며 프로젝트를 기획·만들지만 프로그래밍 지식이 없다.
    - 답변은 **자연어**로, **짧게**, **핵심만**

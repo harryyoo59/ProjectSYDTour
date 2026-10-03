@@ -194,7 +194,7 @@ function render() {
     screenHint.textContent = "투어 지도";
     footNote.textContent = "원하는 곳을 눌러 주세요";
     screenEl.innerHTML = `
-      <h1 class="screen-title">SDY Tour Map</h1>
+      <h1 class="screen-title">SYD Tour Map</h1>
       <p class="screen-desc">장소를 저장하고 바로 찾아가기</p>
       <p class="screen-notice">모든 경로는 유료도로 포함 빠른길로 안내합니다</p>
       <p class="screen-notice">이 목적지는 25인승 버스 기준으로 안내하는 것으로, 해당 차량이 아닌 경우 목적지 주변에서 다시 살펴보기 바랍니다</p>

@@ -1,20 +1,20 @@
 ---
-description: ProjectSDYTour 전용 — SDY Tour(구글 지도로 장소 찾기)
+description: ProjectSYDTour 전용 — SYD Tour(구글 지도로 장소 찾기)
 alwaysApply: true
 ---
 
-# 【전용】 SDY Tour
+# 【전용】 SYD Tour
 
-**ProjectSDYTour 전용.** 소설·삼국지와 섞지 않는다.
+**ProjectSYDTour 전용.** 소설·삼국지와 섞지 않는다.
 
 ## 이 프로젝트는
 
-- **제목**: SDY Tour
+- **제목**: SYD Tour
 - **하는 일**: 구글 지도로 **장소를 찾고 찾아가는** 프로그램
 - 웹에서 쓰는 것을 기본으로 한다
 
 ## 절대 원칙
 
-1. 이 폴더에서는 **SDY Tour / 지도 / 장소 찾기** 얘기만 한다
+1. 이 폴더에서는 **SYD Tour / 지도 / 장소 찾기** 얘기만 한다
 2. ProjectNL(소설)·ProjectH(전략 게임) 기능을 여기로 끌어오지 않는다
 3. 사장님이 **다른 프로젝트**를 직접 말하기 전에는 그쪽으로 넘어가지 않는다
