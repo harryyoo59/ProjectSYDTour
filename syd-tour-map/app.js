@@ -66,6 +66,49 @@ const DATA = [
     ],
   },
   {
+    id: "night",
+    name: "야경코스",
+    subs: [
+      {
+        name: "야경코스",
+        places: [
+          {
+            name: "오페라 하우스",
+            mapsQuery: "Sydney Opera House",
+          },
+          {
+            name: "크루즈 터미널",
+            mapsQuery: "Overseas Passenger Terminal Circular Quay",
+          },
+          {
+            name: "브릿지 스테어",
+            mapsQuery: "Sydney Harbour Bridge stairs",
+          },
+          {
+            name: "밀슨스 포인트",
+            mapsQuery: "Milsons Point Sydney",
+          },
+          {
+            name: "킹스 와프",
+            mapsQuery: "King Street Wharf Sydney",
+          },
+          {
+            name: "수족관",
+            mapsQuery: "SEA LIFE Sydney Aquarium",
+          },
+          {
+            name: "소피텔 호텔",
+            mapsQuery: "Sofitel Sydney Darling Harbour",
+          },
+          {
+            name: "불르스 포인트",
+            mapsQuery: "Blues Point Reserve Sydney",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "food",
     name: "식당",
     subs: [
@@ -280,20 +323,31 @@ function render() {
       <p class="screen-notice">모든 경로는 유료도로 포함 최단·빠른길로 바로 안내합니다</p>
       <p class="screen-notice">이 목적지는 25인승 버스 기준으로 안내하는 것으로, 해당 차량이 아닌 경우 목적지 주변에서 다시 살펴보기 바랍니다</p>
       <div class="category-grid" role="list">
-        ${DATA.map(
-          (cat) => `
+        ${DATA.map((cat) => {
+          const singleSub = cat.subs.length === 1;
+          const meta = singleSub
+            ? `${cat.subs[0].places.length}곳`
+            : `${cat.subs.length}개 그룹`;
+          return `
           <button type="button" class="cat-btn" data-cat="${cat.id}" role="listitem">
             <span class="cat-label">${cat.name}</span>
-            <span class="cat-meta">${cat.subs.length}개 그룹</span>
-          </button>`
-        ).join("")}
+            <span class="cat-meta">${meta}</span>
+          </button>`;
+        }).join("")}
       </div>
     `;
     screenEl.querySelectorAll("[data-cat]").forEach((btn) => {
       btn.addEventListener("click", () => {
-        state.level = "sub";
         state.categoryId = btn.getAttribute("data-cat");
-        state.subIndex = null;
+        const cat = DATA.find((c) => c.id === state.categoryId);
+        // 그룹이 하나뿐이면 바로 장소 목록으로
+        if (cat && cat.subs.length === 1) {
+          state.level = "dest";
+          state.subIndex = 0;
+        } else {
+          state.level = "sub";
+          state.subIndex = null;
+        }
         render();
       });
     });
@@ -346,7 +400,8 @@ function render() {
   }
 
   backBtn.hidden = false;
-  screenHint.textContent = `${cat.name} · ${sub.name}`;
+  screenHint.textContent =
+    cat.subs.length === 1 ? cat.name : `${cat.name} · ${sub.name}`;
   const places = sub.places.map(normalizePlace);
   if (places.length === 0) {
     footNote.textContent = "목적지를 추가하면 여기에서 안내합니다";
@@ -397,8 +452,16 @@ function render() {
 
 backBtn.addEventListener("click", () => {
   if (state.level === "dest") {
-    state.level = "sub";
-    state.subIndex = null;
+    const cat = getCategory();
+    // 그룹이 하나뿐인 카테고리(야경코스 등)는 홈으로 바로 돌아감
+    if (cat && cat.subs.length === 1) {
+      state.level = "home";
+      state.categoryId = null;
+      state.subIndex = null;
+    } else {
+      state.level = "sub";
+      state.subIndex = null;
+    }
   } else if (state.level === "sub") {
     state.level = "home";
     state.categoryId = null;
