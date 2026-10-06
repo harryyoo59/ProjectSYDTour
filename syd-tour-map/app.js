@@ -248,62 +248,27 @@ function saveLastPlace(place) {
   }
 }
 
-function mapsDirectionsUrl(place, origin) {
+function mapsDirectionsUrl(place) {
   const destination = placeDestinationParam(place);
   if (!destination) return null;
+  // 현재 위치 → 목적지, 운전·빠른 경로, 바로 길안내 화면
   const params = new URLSearchParams({
     api: "1",
     destination,
     travelmode: "driving",
-    // 누르면 바로 길안내(경로) 화면으로 진입
     dir_action: "navigate",
   });
-  // 출발점은 항상 현재 접속 위치
-  if (origin) params.set("origin", origin);
   return `https://www.google.com/maps/dir/?${params.toString()}`;
 }
 
 function openMapsDirections(place, onStatus) {
-  const destination = placeDestinationParam(place);
-  if (!destination) return;
+  const url = mapsDirectionsUrl(place);
+  if (!url) return;
 
   saveLastPlace(place);
-
-  const go = (origin) => {
-    const url = mapsDirectionsUrl(place, origin);
-    if (!url) return;
-    if (onStatus) onStatus(null);
-    // 같은 화면에서 바로 지도 경로로 이동 (팝업 대기·차단 없음)
-    window.location.assign(url);
-  };
-
-  // 캐시된 현재 위치가 있으면 그걸 쓰고, 없거나 늦으면 지도가 현재 위치를 쓰도록 즉시 연다
-  if (!navigator.geolocation) {
-    go(null);
-    return;
-  }
-
-  let opened = false;
-  const openOnce = (origin) => {
-    if (opened) return;
-    opened = true;
-    go(origin);
-  };
-
-  // 바로 열기: 위치 응답이 늦으면 기다리지 않음
-  const quickTimer = setTimeout(() => openOnce(null), 400);
-
-  navigator.geolocation.getCurrentPosition(
-    (pos) => {
-      clearTimeout(quickTimer);
-      openOnce(`${pos.coords.latitude},${pos.coords.longitude}`);
-    },
-    () => {
-      clearTimeout(quickTimer);
-      openOnce(null);
-    },
-    { enableHighAccuracy: false, timeout: 1500, maximumAge: 120000 }
-  );
+  if (onStatus) onStatus(null);
+  // 위치 확인을 기다리지 않고 바로 지도(빠른 운전 경로)로 이동
+  window.location.assign(url);
 }
 
 function setHomeChrome(isHome) {
