@@ -1,63 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>SYD Tour</title>
-  <style>
-    :root {
-      --bg: #0f2a24;
-      --bg2: #1a4036;
-      --accent: #e8c547;
-      --text: #f4f7f5;
-      --muted: #a8c4ba;
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      font-family: "Avenir Next", "Apple SD Gothic Neo", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(120% 80% at 20% 0%, #2a5a4a 0%, transparent 55%),
-        linear-gradient(165deg, var(--bg) 0%, var(--bg2) 55%, #0c1f1a 100%);
-    }
-    main {
-      min-height: 100dvh;
-      padding: 2.5rem 1.4rem 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1rem;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(2.4rem, 10vw, 3.2rem);
-      letter-spacing: 0.04em;
-      font-weight: 700;
-    }
-    p {
-      margin: 0;
-      max-width: 22rem;
-      line-height: 1.55;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-    .mark {
-      display: inline-block;
-      margin-top: 0.4rem;
-      color: var(--accent);
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <div class="mark">준비 중</div>
-    <h1>SYD Tour</h1>
-    <p>구글 지도로 장소를 찾고 찾아가는 프로그램입니다. 곧 여기서 길을 찾게 됩니다.</p>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta http-equiv="refresh" content="0; url=./syd-tour-map/" />
+    <title>SYD Tour Map</title>
+    <script>
+      location.replace("./syd-tour-map/");
+    </script>
+  </head>
+  <body>
+    <p><a href="./syd-tour-map/">SYD Tour Map으로 이동</a></p>
+  </body>
 </html>

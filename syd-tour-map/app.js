@@ -22,11 +22,28 @@ const DATA = [
       },
       {
         name: "시드니 국내선(킹스포드 스미스)",
-        places: ["T2 국내선 터미널", "T3 국내선 터미널", "국내선 도착장"],
+        places: [
+          {
+            name: "T2 국내선 터미널",
+            mapsQuery: "Sydney Airport Terminal 2",
+          },
+          {
+            name: "T3 국내선 터미널",
+            mapsQuery: "Sydney Airport Terminal 3",
+          },
+          {
+            name: "국내선 도착장",
+            mapsQuery: "Sydney Airport Terminal 2 Arrivals",
+          },
+        ],
       },
       {
         name: "내 차고지",
-        places: ["차고지 입구", "주차 구역", "출차 게이트"],
+        places: [
+          { name: "차고지 입구", mapsQuery: "차고지 입구" },
+          { name: "주차 구역", mapsQuery: "주차 구역" },
+          { name: "출차 게이트", mapsQuery: "출차 게이트" },
+        ],
       },
     ],
   },
@@ -144,13 +161,20 @@ function getSub() {
   return cat.subs[state.subIndex] || null;
 }
 
+const LAST_PLACE_KEY = "syd-tour-map:last-place";
+
 function normalizePlace(place) {
   if (typeof place === "string") {
-    return { name: place, mapsQuery: null, mapsLat: null, mapsLng: null };
+    return {
+      name: place,
+      mapsQuery: place,
+      mapsLat: null,
+      mapsLng: null,
+    };
   }
   return {
     name: place.name,
-    mapsQuery: place.mapsQuery || null,
+    mapsQuery: place.mapsQuery || place.name,
     mapsLat: place.mapsLat ?? null,
     mapsLng: place.mapsLng ?? null,
   };
@@ -161,25 +185,74 @@ function placeDestinationParam(place) {
     return `${place.mapsLat},${place.mapsLng}`;
   }
   if (place.mapsQuery) return place.mapsQuery;
-  return null;
+  return place.name || null;
 }
 
-function mapsDirectionsUrl(place) {
+function saveLastPlace(place) {
+  try {
+    localStorage.setItem(
+      LAST_PLACE_KEY,
+      JSON.stringify({
+        name: place.name,
+        mapsQuery: place.mapsQuery,
+        mapsLat: place.mapsLat,
+        mapsLng: place.mapsLng,
+        savedAt: Date.now(),
+      })
+    );
+  } catch (_) {
+    /* ignore quota / private mode */
+  }
+}
+
+function mapsDirectionsUrl(place, origin) {
   const destination = placeDestinationParam(place);
   if (!destination) return null;
   const params = new URLSearchParams({
     api: "1",
-    origin: "Current Location",
     destination,
     travelmode: "driving",
   });
+  // 출발점은 항상 현재 접속 위치(좌표)로 고정
+  if (origin) params.set("origin", origin);
   return `https://www.google.com/maps/dir/?${params.toString()}`;
 }
 
-function openMapsDirections(place) {
-  const url = mapsDirectionsUrl(place);
-  if (!url) return;
+function openUrl(url) {
   window.open(url, "_blank", "noopener,noreferrer");
+}
+
+function openMapsDirections(place, onStatus) {
+  const destination = placeDestinationParam(place);
+  if (!destination) return;
+
+  saveLastPlace(place);
+
+  const openWithOrigin = (origin) => {
+    const url = mapsDirectionsUrl(place, origin);
+    if (!url) return;
+    if (onStatus) onStatus(null);
+    openUrl(url);
+  };
+
+  if (!navigator.geolocation) {
+    // 좌표를 못 구할 때는 origin 없이 열어 지도 앱이 현재 위치를 쓰게 함
+    openWithOrigin(null);
+    return;
+  }
+
+  if (onStatus) onStatus("현재 위치를 확인하는 중…");
+
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      openWithOrigin(`${pos.coords.latitude},${pos.coords.longitude}`);
+    },
+    () => {
+      // 권한 거부·실패 시에도 목적지 길찾기는 열되, 지도가 현재 위치를 쓰도록 origin 생략
+      openWithOrigin(null);
+    },
+    { enableHighAccuracy: true, timeout: 10000, maximumAge: 15000 }
+  );
 }
 
 function setHomeChrome(isHome) {
@@ -267,39 +340,41 @@ function render() {
   backBtn.hidden = false;
   screenHint.textContent = `${cat.name} · ${sub.name}`;
   const places = sub.places.map(normalizePlace);
-  const hasMaps = places.some((p) => placeDestinationParam(p));
-  footNote.textContent = hasMaps
-    ? "목적지를 누르면 현재 위치에서 길찾기가 열립니다"
-    : "지도·길찾기는 다음 단계에서 연결됩니다";
+  footNote.textContent =
+    "목적지를 누르면 저장 후, 현재 위치에서 경로 안내가 열립니다";
   screenEl.innerHTML = `
     <h1 class="screen-title">${sub.name}</h1>
-    <p class="screen-desc">${
-      hasMaps
-        ? "목적지를 누르면 구글 지도 길찾기로 이동합니다."
-        : "목적지 이름입니다. (시안용 예시)"
-    }</p>
+    <p class="screen-desc">목적지를 누르면 저장되고, 지금 위치에서 구글 지도 길찾기가 열립니다.</p>
+    <p class="screen-status" id="mapsStatus" hidden></p>
     <div class="list" role="list">
       ${places
-        .map((place, idx) => {
-          const canOpen = Boolean(placeDestinationParam(place));
-          const tag = canOpen ? "button" : "div";
-          const typeAttr = canOpen ? ' type="button"' : "";
-          const clickableClass = canOpen ? " dest-item--maps" : "";
-          return `
-        <${tag}${typeAttr} class="list-item dest-item${clickableClass}" data-place="${idx}" role="listitem">
+        .map(
+          (place, idx) => `
+        <button type="button" class="list-item dest-item dest-item--maps" data-place="${idx}" role="listitem">
           <div class="dest-row">
             <span class="dest-mark" aria-hidden="true"></span>
             <span class="list-name">${place.name}</span>
           </div>
-        </${tag}>`;
-        })
+        </button>`
+        )
         .join("")}
     </div>
   `;
+  const statusEl = document.getElementById("mapsStatus");
+  const setStatus = (text) => {
+    if (!statusEl) return;
+    if (!text) {
+      statusEl.hidden = true;
+      statusEl.textContent = "";
+      return;
+    }
+    statusEl.hidden = false;
+    statusEl.textContent = text;
+  };
   screenEl.querySelectorAll("[data-place].dest-item--maps").forEach((btn) => {
     btn.addEventListener("click", () => {
       const place = places[Number(btn.getAttribute("data-place"))];
-      openMapsDirections(place);
+      openMapsDirections(place, setStatus);
     });
   });
 }
