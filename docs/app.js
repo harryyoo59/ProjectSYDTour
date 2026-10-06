@@ -63,6 +63,30 @@ const DATA = [
         name: "맨리",
         places: [],
       },
+      {
+        name: "불루 마운틴",
+        places: [],
+      },
+      {
+        name: "포트 스테판",
+        places: [],
+      },
+      {
+        name: "헌터스 벨리",
+        places: [],
+      },
+      {
+        name: "저비스 베이",
+        places: [],
+      },
+      {
+        name: "울릉공(카이야마)",
+        places: [],
+      },
+      {
+        name: "뉴카슬",
+        places: [],
+      },
     ],
   },
   {
