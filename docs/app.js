@@ -94,16 +94,28 @@ const DATA = [
     name: "식당",
     subs: [
       {
-        name: "한식",
-        places: ["본가 설렁탕", "골목 비빔밥집", "제주 흑돼지 집"],
+        name: "시티",
+        places: [],
       },
       {
-        name: "일식",
-        places: ["스시 하나", "라멘 요코초", "돈카츠 마루"],
+        name: "파라마타",
+        places: [],
       },
       {
-        name: "카페·디저트",
-        places: ["시부야 로스팅 카페", "긴자 디저트 공방"],
+        name: "실버워터",
+        places: [],
+      },
+      {
+        name: "혼스비",
+        places: [],
+      },
+      {
+        name: "펜니스",
+        places: [],
+      },
+      {
+        name: "뷸루마운틴코스",
+        places: [],
       },
     ],
   },
