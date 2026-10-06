@@ -160,6 +160,10 @@ const DATA = [
         name: "뷸루마운틴코스",
         places: [],
       },
+      {
+        name: "부페",
+        places: [],
+      },
     ],
   },
   {
