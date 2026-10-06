@@ -212,14 +212,12 @@ function mapsDirectionsUrl(place, origin) {
     api: "1",
     destination,
     travelmode: "driving",
+    // 누르면 바로 길안내(경로) 화면으로 진입
+    dir_action: "navigate",
   });
-  // 출발점은 항상 현재 접속 위치(좌표)로 고정
+  // 출발점은 항상 현재 접속 위치
   if (origin) params.set("origin", origin);
   return `https://www.google.com/maps/dir/?${params.toString()}`;
-}
-
-function openUrl(url) {
-  window.open(url, "_blank", "noopener,noreferrer");
 }
 
 function openMapsDirections(place, onStatus) {
@@ -228,30 +226,40 @@ function openMapsDirections(place, onStatus) {
 
   saveLastPlace(place);
 
-  const openWithOrigin = (origin) => {
+  const go = (origin) => {
     const url = mapsDirectionsUrl(place, origin);
     if (!url) return;
     if (onStatus) onStatus(null);
-    openUrl(url);
+    // 같은 화면에서 바로 지도 경로로 이동 (팝업 대기·차단 없음)
+    window.location.assign(url);
   };
 
+  // 캐시된 현재 위치가 있으면 그걸 쓰고, 없거나 늦으면 지도가 현재 위치를 쓰도록 즉시 연다
   if (!navigator.geolocation) {
-    // 좌표를 못 구할 때는 origin 없이 열어 지도 앱이 현재 위치를 쓰게 함
-    openWithOrigin(null);
+    go(null);
     return;
   }
 
-  if (onStatus) onStatus("현재 위치를 확인하는 중…");
+  let opened = false;
+  const openOnce = (origin) => {
+    if (opened) return;
+    opened = true;
+    go(origin);
+  };
+
+  // 바로 열기: 위치 응답이 늦으면 기다리지 않음
+  const quickTimer = setTimeout(() => openOnce(null), 400);
 
   navigator.geolocation.getCurrentPosition(
     (pos) => {
-      openWithOrigin(`${pos.coords.latitude},${pos.coords.longitude}`);
+      clearTimeout(quickTimer);
+      openOnce(`${pos.coords.latitude},${pos.coords.longitude}`);
     },
     () => {
-      // 권한 거부·실패 시에도 목적지 길찾기는 열되, 지도가 현재 위치를 쓰도록 origin 생략
-      openWithOrigin(null);
+      clearTimeout(quickTimer);
+      openOnce(null);
     },
-    { enableHighAccuracy: true, timeout: 10000, maximumAge: 15000 }
+    { enableHighAccuracy: false, timeout: 1500, maximumAge: 120000 }
   );
 }
 
@@ -269,7 +277,7 @@ function render() {
     screenEl.innerHTML = `
       <h1 class="screen-title">SYD Tour Map</h1>
       <p class="screen-desc">장소를 저장하고 바로 찾아가기</p>
-      <p class="screen-notice">모든 경로는 유료도로 포함 빠른길로 안내합니다</p>
+      <p class="screen-notice">모든 경로는 유료도로 포함 최단·빠른길로 바로 안내합니다</p>
       <p class="screen-notice">이 목적지는 25인승 버스 기준으로 안내하는 것으로, 해당 차량이 아닌 경우 목적지 주변에서 다시 살펴보기 바랍니다</p>
       <div class="category-grid" role="list">
         ${DATA.map(
@@ -349,10 +357,10 @@ function render() {
     return;
   }
   footNote.textContent =
-    "목적지를 누르면 저장 후, 현재 위치에서 경로 안내가 열립니다";
+    "목적지를 누르면 저장 후, 현재 위치에서 최단 경로 지도가 바로 열립니다";
   screenEl.innerHTML = `
     <h1 class="screen-title">${sub.name}</h1>
-    <p class="screen-desc">목적지를 누르면 저장되고, 지금 위치에서 구글 지도 길찾기가 열립니다.</p>
+    <p class="screen-desc">목적지를 누르면 저장되고, 지금 위치에서 최단 경로 안내가 바로 열립니다.</p>
     <p class="screen-status" id="mapsStatus" hidden></p>
     <div class="list" role="list">
       ${places
