@@ -4,45 +4,21 @@ const DATA = [
     name: "공항",
     subs: [
       {
-        name: "시드니 국제선(킹스포드 스미스)",
+        name: "국제선 출국장",
         places: [
           {
-            name: "T1 국제선 터미널 출국장",
+            name: "국제선 출국장",
             mapsQuery: "Sydney Airport Terminal 1 Departures",
           },
-          {
-            name: "T1 국제선 픽업존",
-            mapsQuery: "Regis Hotel Sydney Airport",
-          },
-          {
-            name: "T1 승용차 주차장",
-            mapsQuery: "Sydney Airport Terminal 1 Parking",
-          },
         ],
       },
       {
-        name: "시드니 국내선(킹스포드 스미스)",
+        name: "국내선 출국장",
         places: [
           {
-            name: "T2 국내선 터미널",
-            mapsQuery: "Sydney Airport Terminal 2",
+            name: "국내선 출국장",
+            mapsQuery: "Sydney Airport Terminal 2 Departures",
           },
-          {
-            name: "T3 국내선 터미널",
-            mapsQuery: "Sydney Airport Terminal 3",
-          },
-          {
-            name: "국내선 도착장",
-            mapsQuery: "Sydney Airport Terminal 2 Arrivals",
-          },
-        ],
-      },
-      {
-        name: "내 차고지",
-        places: [
-          { name: "차고지 입구", mapsQuery: "차고지 입구" },
-          { name: "주차 구역", mapsQuery: "주차 구역" },
-          { name: "출차 게이트", mapsQuery: "출차 게이트" },
         ],
       },
     ],
