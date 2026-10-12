@@ -120,7 +120,24 @@ body {
 }
 
 .brand-block {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(15, 40, 90, 0.18);
+}
+
+.brand-text {
+  min-width: 0;
 }
 
 .brand {
@@ -140,6 +157,17 @@ body {
   font-weight: 500;
   color: var(--muted);
   letter-spacing: -0.01em;
+}
+
+.home-icon {
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 14px;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 10px 28px rgba(15, 40, 90, 0.22);
+  animation: brandIn 520ms ease both;
 }
 
 .screen {

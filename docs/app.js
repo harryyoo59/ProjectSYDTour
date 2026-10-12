@@ -296,6 +296,7 @@ function render() {
     screenHint.textContent = "투어 지도";
     footNote.textContent = "원하는 곳을 눌러 주세요";
     screenEl.innerHTML = `
+      <img class="home-icon" src="./icon.png" alt="" width="88" height="88" />
       <h1 class="screen-title">SYD Tour Map</h1>
       <p class="screen-desc">장소를 저장하고 바로 찾아가기</p>
       <p class="screen-notice">모든 경로는 유료도로 포함 최단·빠른길로 바로 안내합니다</p>
