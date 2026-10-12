@@ -63,6 +63,10 @@ const DATA = [
         name: "맨리",
         places: [],
       },
+      {
+        name: "야경투어",
+        places: [],
+      },
     ],
   },
   {
