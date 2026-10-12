@@ -48,13 +48,19 @@ const DATA = [
     ],
   },
   {
-    id: "spot",
-    name: "관광지",
+    id: "spot-city",
+    name: "관광지(시티)",
     subs: [
       {
         name: "시티",
         places: [],
       },
+    ],
+  },
+  {
+    id: "spot-outer",
+    name: "관광지(외곽)",
+    subs: [
       {
         name: "본다이 비치",
         places: [],
