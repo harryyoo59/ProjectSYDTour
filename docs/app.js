@@ -55,12 +55,6 @@ const DATA = [
         name: "시티",
         places: [],
       },
-    ],
-  },
-  {
-    id: "spot-outer",
-    name: "관광지(외곽)",
-    subs: [
       {
         name: "본다이 비치",
         places: [],
@@ -69,6 +63,12 @@ const DATA = [
         name: "맨리",
         places: [],
       },
+    ],
+  },
+  {
+    id: "spot-outer",
+    name: "관광지(외곽)",
+    subs: [
       {
         name: "불루 마운틴",
         places: [],
