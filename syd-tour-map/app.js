@@ -123,7 +123,7 @@ const DATA = [
     name: "식당",
     subs: [
       {
-        name: "시티",
+        name: "시티. 공항",
         places: [],
       },
       {
