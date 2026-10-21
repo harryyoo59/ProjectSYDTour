@@ -211,16 +211,24 @@ const DATA = [
     name: "기타",
     subs: [
       {
-        name: "교통",
-        places: ["JR 패스 교환소", "시부야 버스 터미널", "우에노 역"],
+        name: "벤 정비공장",
+        places: [],
       },
       {
-        name: "생활 편의",
-        places: ["세븐일레븐 편의점", "마츠모토 약국"],
+        name: "회사",
+        places: [],
       },
       {
-        name: "의료·긴급",
-        places: ["시내 종합병원", "여행자 클리닉"],
+        name: "금호 타이어",
+        places: [],
+      },
+      {
+        name: "코치 검사",
+        places: [],
+      },
+      {
+        name: "버스 수리",
+        places: [],
       },
     ],
   },
