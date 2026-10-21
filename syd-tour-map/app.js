@@ -107,6 +107,10 @@ const DATA = [
             name: "사우 스테인 메디컬 센터",
             mapsQuery: "South Steyne Medical Centre Manly",
           },
+          {
+            name: "드리프트 카페",
+            mapsQuery: "Drift Cafe Manly",
+          },
         ],
       },
       {
