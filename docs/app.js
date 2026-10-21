@@ -100,6 +100,10 @@ const DATA = [
         places: [],
       },
       {
+        name: "에핑지역",
+        places: [],
+      },
+      {
         name: "펜니스",
         places: [],
       },
