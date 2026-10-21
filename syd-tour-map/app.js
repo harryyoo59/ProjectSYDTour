@@ -86,7 +86,28 @@ const DATA = [
       },
       {
         name: "맨리",
-        places: [],
+        places: [
+          {
+            name: "멜리와프",
+            mapsQuery: "Manly Wharf",
+          },
+          {
+            name: "노스 헤드",
+            mapsQuery: "North Head Manly",
+          },
+          {
+            name: "멜리 스타벅스",
+            mapsQuery: "Starbucks Manly",
+          },
+          {
+            name: "실리비치",
+            mapsQuery: "Shelly Beach Manly",
+          },
+          {
+            name: "사우 스테인 메디컬 센터",
+            mapsQuery: "South Steyne Medical Centre Manly",
+          },
+        ],
       },
       {
         name: "야경투어",
