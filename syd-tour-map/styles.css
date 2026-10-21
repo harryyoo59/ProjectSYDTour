@@ -159,6 +159,19 @@ body {
   letter-spacing: -0.01em;
 }
 
+.topbar:not(.is-home) .brand {
+  display: none;
+}
+
+.topbar:not(.is-home) .brand-sub {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
 .home-hero {
   display: flex;
   align-items: center;

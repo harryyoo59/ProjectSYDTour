@@ -369,8 +369,6 @@ function render() {
     screenHint.textContent = cat.name;
     footNote.textContent = "소그룹을 고르면 장소 목록이 나옵니다";
     screenEl.innerHTML = `
-      <h1 class="screen-title">${cat.name}</h1>
-      <p class="screen-desc">아래에서 소그룹을 선택하세요.</p>
       <div class="list" role="list">
         ${cat.subs
           .map(
@@ -401,13 +399,11 @@ function render() {
   }
 
   backBtn.hidden = false;
-  screenHint.textContent =
-    cat.subs.length === 1 ? cat.name : `${cat.name} · ${sub.name}`;
+  screenHint.textContent = sub.name;
   const places = sub.places.map(normalizePlace);
   if (places.length === 0) {
     footNote.textContent = "목적지를 추가하면 여기에서 안내합니다";
     screenEl.innerHTML = `
-      <h1 class="screen-title">${sub.name}</h1>
       <p class="screen-desc">아직 저장된 목적지가 없습니다.</p>
     `;
     return;
@@ -415,8 +411,6 @@ function render() {
   footNote.textContent =
     "목적지를 누르면 저장 후, 현재 위치에서 최단 경로 지도가 바로 열립니다";
   screenEl.innerHTML = `
-    <h1 class="screen-title">${sub.name}</h1>
-    <p class="screen-desc">목적지를 누르면 저장되고, 지금 위치에서 최단 경로 안내가 바로 열립니다.</p>
     <p class="screen-status" id="mapsStatus" hidden></p>
     <div class="list" role="list">
       ${places
