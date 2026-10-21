@@ -318,8 +318,6 @@ function render() {
       <img class="home-icon" src="./icon.png" alt="" width="88" height="88" />
       <h1 class="screen-title">SYD Tour Map</h1>
       <p class="screen-desc">장소를 저장하고 바로 찾아가기</p>
-      <p class="screen-notice">모든 경로는 유료도로 포함 최단·빠른길로 바로 안내합니다</p>
-      <p class="screen-notice">이 목적지는 25인승 버스 기준으로 안내하는 것으로, 해당 차량이 아닌 경우 목적지 주변에서 다시 살펴보기 바랍니다</p>
       <div class="category-grid" role="list">
         ${DATA.map((cat) => {
           const singleSub = cat.subs.length === 1;
@@ -333,6 +331,8 @@ function render() {
           </button>`;
         }).join("")}
       </div>
+      <p class="screen-notice">모든 경로는 유료도로 포함 최단·빠른길로 바로 안내합니다</p>
+      <p class="screen-notice">이 목적지는 25인승 버스 기준으로 안내하는 것으로, 해당 차량이 아닌 경우 목적지 주변에서 다시 살펴보기 바랍니다</p>
     `;
     screenEl.querySelectorAll("[data-cat]").forEach((btn) => {
       btn.addEventListener("click", () => {

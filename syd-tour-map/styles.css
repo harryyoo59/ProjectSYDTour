@@ -216,10 +216,15 @@ body {
 
 .screen-notice + .screen-notice {
   margin-top: -10px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-size: 11px;
   line-height: 1.4;
   animation-delay: 40ms;
+}
+
+.category-grid + .screen-notice {
+  margin-top: 18px;
+  margin-bottom: 10px;
 }
 
 .screen.is-home {
