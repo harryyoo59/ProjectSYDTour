@@ -282,7 +282,7 @@ function saveLastPlace(place) {
 function mapsDirectionsUrl(place) {
   const destination = placeDestinationParam(place);
   if (!destination) return null;
-  // 현재 위치 → 목적지, 운전·빠른 경로, 바로 길안내 화면
+  // 현재 위치 → 목적지, 운전·베스트(추천) 경로, 바로 길안내
   const params = new URLSearchParams({
     api: "1",
     destination,
@@ -292,14 +292,27 @@ function mapsDirectionsUrl(place) {
   return `https://www.google.com/maps/dir/?${params.toString()}`;
 }
 
-function openMapsDirections(place, onStatus) {
-  const url = mapsDirectionsUrl(place);
-  if (!url) return;
+function openMapsDirections(place) {
+  const destination = placeDestinationParam(place);
+  if (!destination) return;
 
   saveLastPlace(place);
-  if (onStatus) onStatus(null);
-  // 위치 확인을 기다리지 않고 바로 지도(빠른 운전 경로)로 이동
-  window.location.assign(url);
+
+  const q = encodeURIComponent(destination);
+  const ua = navigator.userAgent || "";
+  // 설명·경로 고르기 화면 없이, 베스트 운전 경로로 바로 지도 길안내
+  if (/Android/i.test(ua)) {
+    window.location.href = `google.navigation:q=${q}&mode=d`;
+    return;
+  }
+  if (/iPhone|iPad|iPod/i.test(ua)) {
+    window.location.href = `comgooglemaps://?daddr=${q}&directionsmode=driving&navigate=1`;
+    setTimeout(() => {
+      window.location.href = mapsDirectionsUrl(place);
+    }, 650);
+    return;
+  }
+  window.location.assign(mapsDirectionsUrl(place));
 }
 
 function setHomeChrome(isHome) {
@@ -408,10 +421,8 @@ function render() {
     `;
     return;
   }
-  footNote.textContent =
-    "목적지를 누르면 저장 후, 현재 위치에서 최단 경로 지도가 바로 열립니다";
+  footNote.textContent = "";
   screenEl.innerHTML = `
-    <p class="screen-status" id="mapsStatus" hidden></p>
     <div class="list" role="list">
       ${places
         .map(
@@ -426,21 +437,10 @@ function render() {
         .join("")}
     </div>
   `;
-  const statusEl = document.getElementById("mapsStatus");
-  const setStatus = (text) => {
-    if (!statusEl) return;
-    if (!text) {
-      statusEl.hidden = true;
-      statusEl.textContent = "";
-      return;
-    }
-    statusEl.hidden = false;
-    statusEl.textContent = text;
-  };
   screenEl.querySelectorAll("[data-place].dest-item--maps").forEach((btn) => {
     btn.addEventListener("click", () => {
       const place = places[Number(btn.getAttribute("data-place"))];
-      openMapsDirections(place, setStatus);
+      openMapsDirections(place);
     });
   });
 }
