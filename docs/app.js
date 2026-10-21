@@ -51,10 +51,6 @@ const DATA = [
             mapsQuery: "SEA LIFE Sydney Aquarium",
           },
           {
-            name: "라페 로즈",
-            mapsQuery: "La Perouse Sydney",
-          },
-          {
             name: "시드니타워",
             mapsQuery: "Sydney Tower Eye",
           },
@@ -73,6 +69,10 @@ const DATA = [
           {
             name: "미술관",
             mapsQuery: "Art Gallery of New South Wales",
+          },
+          {
+            name: "라페 로즈",
+            mapsQuery: "La Perouse Sydney",
           },
         ],
       },
