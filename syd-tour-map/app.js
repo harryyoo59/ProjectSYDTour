@@ -314,9 +314,13 @@ function render() {
     screenHint.textContent = "투어 지도";
     footNote.textContent = "원하는 곳을 눌러 주세요";
     screenEl.innerHTML = `
-      <img class="home-icon" src="./icon.png" alt="" width="88" height="88" />
-      <h1 class="screen-title">SYD Tour Map</h1>
-      <p class="screen-desc">장소를 저장하고 바로 찾아가기</p>
+      <div class="home-hero">
+        <img class="home-icon" src="./icon.png" alt="" width="72" height="72" />
+        <div class="home-hero-text">
+          <h1 class="screen-title">SYD Tour Map</h1>
+          <p class="screen-desc">장소를 저장하고 바로 찾아가기</p>
+        </div>
+      </div>
       <div class="category-grid" role="list">
         ${DATA.map((cat) => {
           const singleSub = cat.subs.length === 1;

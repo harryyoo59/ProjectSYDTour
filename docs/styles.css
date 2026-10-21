@@ -159,15 +159,38 @@ body {
   letter-spacing: -0.01em;
 }
 
+.home-hero {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
 .home-icon {
   display: block;
-  width: 88px;
-  height: 88px;
-  margin: 0 auto 14px;
-  border-radius: 22px;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  margin: 0;
+  border-radius: 18px;
   object-fit: cover;
   box-shadow: 0 10px 28px rgba(15, 40, 90, 0.22);
   animation: brandIn 520ms ease both;
+}
+
+.home-hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.home-hero .screen-title {
+  margin: 0 0 4px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.home-hero .screen-desc {
+  margin: 0;
 }
 
 .screen {
@@ -231,8 +254,11 @@ body {
   padding-top: 28px;
 }
 
-.screen.is-home .screen-title,
-.screen.is-home .screen-desc,
+.screen.is-home .home-hero .screen-title,
+.screen.is-home .home-hero .screen-desc {
+  text-align: left;
+}
+
 .screen.is-home .screen-notice {
   text-align: center;
 }
