@@ -100,15 +100,7 @@ const DATA = [
         places: [],
       },
       {
-        name: "블랙타운",
-        places: [],
-      },
-      {
-        name: "펜니스",
-        places: [],
-      },
-      {
-        name: "뷸루마운틴코스",
+        name: "불루마운틴(펜리스.블랙타운)",
         places: [],
       },
       {
