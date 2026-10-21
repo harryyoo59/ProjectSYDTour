@@ -300,19 +300,35 @@ function openMapsDirections(place) {
 
   const q = encodeURIComponent(destination);
   const ua = navigator.userAgent || "";
-  // 설명·경로 고르기 화면 없이, 베스트 운전 경로로 바로 지도 길안내
+  const webUrl = mapsDirectionsUrl(place);
+
+  // 핸드폰: 구글 지도 앱에서 베스트 운전 경로로 바로 길안내
+  // (인터넷 지도 설명·경로 고르기 화면을 건너뜀)
   if (/Android/i.test(ua)) {
     window.location.href = `google.navigation:q=${q}&mode=d`;
     return;
   }
   if (/iPhone|iPad|iPod/i.test(ua)) {
-    window.location.href = `comgooglemaps://?daddr=${q}&directionsmode=driving&navigate=1`;
+    const appUrl = `comgooglemaps://?daddr=${q}&directionsmode=driving&navigate=1`;
+    let openedApp = false;
+    const onHide = () => {
+      openedApp = true;
+      document.removeEventListener("visibilitychange", onHide);
+    };
+    document.addEventListener("visibilitychange", onHide);
+    window.location.href = appUrl;
     setTimeout(() => {
-      window.location.href = mapsDirectionsUrl(place);
-    }, 650);
+      document.removeEventListener("visibilitychange", onHide);
+      // 앱이 안 열린 경우에만 인터넷 지도로 이동
+      if (!openedApp && !document.hidden) {
+        window.location.href = webUrl;
+      }
+    }, 1200);
     return;
   }
-  window.location.assign(mapsDirectionsUrl(place));
+
+  // 컴퓨터: 구글이 경로 설명 화면을 강제하므로 Best 운전 경로로만 연다
+  window.location.assign(webUrl);
 }
 
 function setHomeChrome(isHome) {
