@@ -147,6 +147,10 @@ const DATA = [
         places: [],
       },
       {
+        name: "블랙타운",
+        places: [],
+      },
+      {
         name: "펜니스",
         places: [],
       },
