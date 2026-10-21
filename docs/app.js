@@ -88,11 +88,7 @@ const DATA = [
         places: [],
       },
       {
-        name: "실버워터",
-        places: [],
-      },
-      {
-        name: "웨스트 라이드",
+        name: "실버워터 웨스트라이드",
         places: [],
       },
       {
