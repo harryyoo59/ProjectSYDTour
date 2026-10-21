@@ -59,10 +59,6 @@ const DATA = [
             mapsQuery: "University of Sydney",
           },
           {
-            name: "수산시장",
-            mapsQuery: "Sydney Fish Market",
-          },
-          {
             name: "천문대",
             mapsQuery: "Sydney Observatory",
           },
@@ -73,6 +69,10 @@ const DATA = [
           {
             name: "라페 로즈",
             mapsQuery: "La Perouse Sydney",
+          },
+          {
+            name: "수산시장",
+            mapsQuery: "Sydney Fish Market",
           },
         ],
       },
