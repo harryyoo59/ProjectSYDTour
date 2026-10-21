@@ -115,9 +115,8 @@ const DATA = [
     subs: [
       { name: "시티", places: [] },
       { name: "공랑", places: [] },
-      { name: "노스라이드", places: [] },
-      { name: "올림픽 팍", places: [] },
-      { name: "맥쿼리 팍", places: [] },
+      { name: "아타몬. 노스라이드", places: [] },
+      { name: "올림픽 팍. 맥콰리 팍", places: [] },
       { name: "파라마타", places: [] },
       { name: "뱅스타운", places: [] },
       { name: "카브라마타", places: [] },
