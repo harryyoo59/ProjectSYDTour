@@ -88,7 +88,7 @@ const DATA = [
         name: "맨리",
         places: [
           {
-            name: "멜리와프",
+            name: "맨리와프",
             mapsQuery: "Manly Wharf",
           },
           {
@@ -96,7 +96,7 @@ const DATA = [
             mapsQuery: "North Head Manly",
           },
           {
-            name: "멜리 스타벅스",
+            name: "맨리 스타벅스",
             mapsQuery: "Starbucks Manly",
           },
           {
