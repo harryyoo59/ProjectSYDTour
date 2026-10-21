@@ -135,6 +135,10 @@ const DATA = [
         places: [],
       },
       {
+        name: "웨스트 라이드",
+        places: [],
+      },
+      {
         name: "혼스비",
         places: [],
       },
