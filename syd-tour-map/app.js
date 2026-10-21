@@ -156,7 +156,7 @@ const DATA = [
     id: "hotel",
     name: "호텔",
     subs: [
-      { name: "시티", places: [] },
+      { name: "시티.공항", places: [] },
       { name: "공랑", places: [] },
       { name: "아타몬. 노스라이드", places: [] },
       { name: "올림픽 팍. 맥콰리 팍", places: [] },
