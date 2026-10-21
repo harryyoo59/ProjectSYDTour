@@ -29,7 +29,52 @@ const DATA = [
     subs: [
       {
         name: "시티",
-        places: [],
+        places: [
+          {
+            name: "오페라하우스",
+            mapsQuery: "Sydney Opera House",
+          },
+          {
+            name: "성당",
+            mapsQuery: "St Mary's Cathedral Sydney",
+          },
+          {
+            name: "해양 박물관",
+            mapsQuery: "Australian National Maritime Museum",
+          },
+          {
+            name: "킹스 와프",
+            mapsQuery: "King Street Wharf Sydney",
+          },
+          {
+            name: "수족관",
+            mapsQuery: "SEA LIFE Sydney Aquarium",
+          },
+          {
+            name: "라페 로즈",
+            mapsQuery: "La Perouse Sydney",
+          },
+          {
+            name: "시드니타워",
+            mapsQuery: "Sydney Tower Eye",
+          },
+          {
+            name: "시드니 대학",
+            mapsQuery: "University of Sydney",
+          },
+          {
+            name: "수산시장",
+            mapsQuery: "Sydney Fish Market",
+          },
+          {
+            name: "천문대",
+            mapsQuery: "Sydney Observatory",
+          },
+          {
+            name: "미술관",
+            mapsQuery: "Art Gallery of New South Wales",
+          },
+        ],
       },
       {
         name: "본다이 비치",
