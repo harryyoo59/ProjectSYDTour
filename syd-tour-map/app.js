@@ -74,6 +74,10 @@ const DATA = [
             name: "수산시장",
             mapsQuery: "Sydney Fish Market",
           },
+          {
+            name: "트램쉐드",
+            mapsQuery: "Tramsheds Harold Park Sydney",
+          },
         ],
       },
       {
