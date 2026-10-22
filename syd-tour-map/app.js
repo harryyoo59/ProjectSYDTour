@@ -668,7 +668,27 @@ const DATA = [
           },
         ],
       },
-      { name: "카브라마타,워릭팜", places: [] },
+      {
+        name: "카브라마타,워릭팜",
+        places: [
+          {
+            name: "라마다 카브라마타",
+            mapsQuery: "Ramada Hotel Cabramatta",
+          },
+          {
+            name: "홀리데이인 워릭 팜",
+            mapsQuery: "Holiday Inn Warwick Farm",
+          },
+          {
+            name: "노보텔 카브라마타",
+            mapsQuery: "Novotel Sydney Cabramatta",
+          },
+          {
+            name: "읠리암 워릭팜",
+            mapsQuery: "Gov Macquarie Dr, Warwick Farm NSW 2170",
+          },
+        ],
+      },
       { name: "블랙타운.이스턴 클릭", places: [] },
       { name: "벨라비스타.노웨스트", places: [] },
       { name: "웨스트 HQ. 펜리스.리버플", places: [] },
