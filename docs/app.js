@@ -262,7 +262,28 @@ const DATA = [
       },
       {
         name: "저비스 베이",
-        places: [],
+        places: [
+          {
+            name: "쿨랑가타 와이너리",
+            mapsQuery: "Coolangatta Estate Winery Shoalhaven",
+          },
+          {
+            name: "저비스베이",
+            mapsQuery: "Jervis Bay NSW",
+          },
+          {
+            name: "하이엄스 비치",
+            mapsQuery: "Hyams Beach Jervis Bay",
+          },
+          {
+            name: "미나무라 rain Forest",
+            mapsQuery: "Minnamurra Rainforest",
+          },
+          {
+            name: "베리 마을",
+            mapsQuery: "Berry NSW",
+          },
+        ],
       },
       {
         name: "울릉공(카이야마)",
