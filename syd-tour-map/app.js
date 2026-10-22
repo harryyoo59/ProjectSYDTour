@@ -245,7 +245,20 @@ const DATA = [
       },
       {
         name: "헌터스 벨리",
-        places: [],
+        places: [
+          {
+            name: "헌터스 밸리 치즈 팩토리",
+            mapsQuery: "Hunter Valley Cheese Company",
+          },
+          {
+            name: "헌터 밸리 가든스",
+            mapsQuery: "Hunter Valley Gardens",
+          },
+          {
+            name: "헌터 밸리 와이너리",
+            mapsQuery: "Hunter Valley Winery",
+          },
+        ],
       },
       {
         name: "저비스 베이",
