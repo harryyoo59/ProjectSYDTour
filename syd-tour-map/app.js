@@ -128,7 +128,40 @@ const DATA = [
       },
       {
         name: "야경투어",
-        places: [],
+        places: [
+          {
+            name: "오페라하우스",
+            mapsQuery: "Sydney Opera House",
+          },
+          {
+            name: "크루즈 터미널",
+            mapsQuery: "Overseas Passenger Terminal Circular Quay",
+          },
+          {
+            name: "브릿지 스테어",
+            mapsQuery: "Sydney Harbour Bridge stairs",
+          },
+          {
+            name: "밀슨스 포인트",
+            mapsQuery: "Milsons Point Sydney",
+          },
+          {
+            name: "소피텔 호텔",
+            mapsQuery: "Sofitel Sydney Darling Harbour",
+          },
+          {
+            name: "천문대",
+            mapsQuery: "Sydney Observatory",
+          },
+          {
+            name: "블루스 포인트",
+            mapsQuery: "Blues Point Reserve Sydney",
+          },
+          {
+            name: "파크 하얏트",
+            mapsQuery: "Park Hyatt Sydney",
+          },
+        ],
       },
     ],
   },
