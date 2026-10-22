@@ -82,7 +82,20 @@ const DATA = [
       },
       {
         name: "본다이 비치",
-        places: [],
+        places: [
+          {
+            name: "갭팍",
+            mapsQuery: "Gap Park Sydney",
+          },
+          {
+            name: "더들리 페이지",
+            mapsQuery: "Dudley Page Reserve Dover Heights",
+          },
+          {
+            name: "본다이비치",
+            mapsQuery: "Bondi Beach",
+          },
+        ],
       },
       {
         name: "맨리",
