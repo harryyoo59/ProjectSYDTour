@@ -784,6 +784,10 @@ const DATA = [
     name: "동물원. 쇼핑",
     subs: [
       {
+        name: "동물원",
+        places: [],
+      },
+      {
         name: "양모",
         places: [],
       },
