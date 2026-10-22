@@ -856,7 +856,12 @@ const DATA = [
       },
       {
         name: "버스 수리",
-        places: [],
+        places: [
+          {
+            name: "정비공장",
+            mapsQuery: "88 Rosedale Ave, Greenacre NSW 2190",
+          },
+        ],
       },
     ],
   },
