@@ -433,7 +433,7 @@ const DATA = [
           },
           {
             name: "시나 마리나",
-            mapsQuery: "China Marina Sydney",
+            mapsQuery: "6/7-41 Cowper Wharf Roadway, Woolloomooloo NSW 2011",
           },
           {
             name: "포춘 BAR",
