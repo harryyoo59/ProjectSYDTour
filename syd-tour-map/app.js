@@ -390,7 +390,56 @@ const DATA = [
     subs: [
       {
         name: "시티. 공항",
-        places: [],
+        places: [
+          {
+            name: "노보텔",
+            mapsQuery: "Novotel Sydney",
+          },
+          {
+            name: "목시",
+            mapsQuery: "Moxy Sydney",
+          },
+          {
+            name: "수련",
+            mapsQuery: "수련 Sydney",
+          },
+          {
+            name: "카페 퀸즈",
+            mapsQuery: "Cafe Queens Sydney",
+          },
+          {
+            name: "밀레오레",
+            mapsQuery: "Milleore Sydney",
+          },
+          {
+            name: "명장",
+            mapsQuery: "명장 Sydney",
+          },
+          {
+            name: "스크러피 머피",
+            mapsQuery: "Scruffy Murphy's Sydney",
+          },
+          {
+            name: "하버뷰",
+            mapsQuery: "Harbour View Hotel Sydney",
+          },
+          {
+            name: "디지 버드",
+            mapsQuery: "Dizzy Bird Sydney",
+          },
+          {
+            name: "리플스",
+            mapsQuery: "Ripples Sydney",
+          },
+          {
+            name: "시나 마리나",
+            mapsQuery: "China Marina Sydney",
+          },
+          {
+            name: "포춘 BAR",
+            mapsQuery: "Fortune Bar Sydney",
+          },
+        ],
       },
       {
         name: "파라마타",
