@@ -454,7 +454,7 @@ const DATA = [
           },
           {
             name: "코리안 프라이드 치킨",
-            mapsQuery: "Korean Fried Chicken Parramatta",
+            mapsQuery: "1 Broughton St, Parramatta NSW 2150",
           },
         ],
       },
