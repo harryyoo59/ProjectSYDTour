@@ -739,7 +739,27 @@ const DATA = [
           },
         ],
       },
-      { name: "웨스트 HQ. 펜리스.리버플", places: [] },
+      {
+        name: "웨스트 HQ. 펜리스.리버플",
+        places: [
+          {
+            name: "노보텔 루테힐",
+            mapsQuery: "Novotel Rooty Hill",
+          },
+          {
+            name: "머큐어 펜리스",
+            mapsQuery: "Mercure Penrith",
+          },
+          {
+            name: "홀리데이인 세인트 메리스",
+            mapsQuery: "Holiday Inn St Marys Sydney",
+          },
+          {
+            name: "헌츠 호텔 리버플",
+            mapsQuery: "Hunts Hotel Liverpool",
+          },
+        ],
+      },
       { name: "뉴카슬.나우라", places: [] },
     ],
   },
