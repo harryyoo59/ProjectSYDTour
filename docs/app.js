@@ -776,7 +776,16 @@ const DATA = [
       },
       {
         name: "제약",
-        places: [],
+        places: [
+          {
+            name: "퓨어 오스트레일리아",
+            mapsQuery: "Pure Australia Sydney",
+          },
+          {
+            name: "로얄 시그니 면세점 SDF",
+            mapsQuery: "136 Liverpool St, Sydney NSW 2000",
+          },
+        ],
       },
       {
         name: "잡화",
