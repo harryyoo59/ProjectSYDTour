@@ -798,6 +798,18 @@ const DATA = [
             name: "로얄 시드니 면세점 SDF",
             mapsQuery: "136 Liverpool St, Sydney NSW 2000",
           },
+          {
+            name: "시드니 듀티 프리 SDF",
+            mapsQuery: "136 Liverpool St, Sydney NSW",
+          },
+          {
+            name: "로시드",
+            mapsQuery: "101 Sussex St, Sydney NSW 2000",
+          },
+          {
+            name: "피어몬트",
+            mapsQuery: "25 Harvey St, Pyrmont NSW",
+          },
         ],
       },
     ],
