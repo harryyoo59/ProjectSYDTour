@@ -523,6 +523,10 @@ const DATA = [
             name: "팔레 로얄",
             mapsQuery: "Palais Royal Penrith",
           },
+          {
+            name: "라샤의 웨더릴 팍",
+            mapsQuery: "Shop 200, 581/583 Polding St, Wetherill Park NSW 2164",
+          },
         ],
       },
       {
