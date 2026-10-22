@@ -781,7 +781,7 @@ const DATA = [
   },
   {
     id: "shop",
-    name: "쇼핑",
+    name: "동물원. 쇼핑",
     subs: [
       {
         name: "양모",
