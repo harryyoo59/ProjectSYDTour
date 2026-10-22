@@ -100,7 +100,7 @@ const DATA = [
             mapsQuery: "Starbucks Manly",
           },
           {
-            name: "실리비치",
+            name: "셀리 비치",
             mapsQuery: "Shelly Beach Manly",
           },
           {
