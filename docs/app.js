@@ -829,7 +829,12 @@ const DATA = [
       },
       {
         name: "회사",
-        places: [],
+        places: [
+          {
+            name: "샤인코치",
+            mapsQuery: "187 John St, Lidcombe NSW 2141",
+          },
+        ],
       },
       {
         name: "금호 타이어",
