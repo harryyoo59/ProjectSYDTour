@@ -270,7 +270,28 @@ const DATA = [
       },
       {
         name: "뉴카슬",
-        places: [],
+        places: [
+          {
+            name: "노비스 비치",
+            mapsQuery: "Nobbys Beach Newcastle",
+          },
+          {
+            name: "뉴카슬 메모리얼 파크",
+            mapsQuery: "Newcastle Memorial Park",
+          },
+          {
+            name: "뉴카슬 성당",
+            mapsQuery: "Christ Church Cathedral Newcastle",
+          },
+          {
+            name: "엔터런스",
+            mapsQuery: "The Entrance NSW",
+          },
+          {
+            name: "캐이브즈 비치 룩 아웃",
+            mapsQuery: "Caves Beach Lookout",
+          },
+        ],
       },
     ],
   },
