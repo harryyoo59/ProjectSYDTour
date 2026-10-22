@@ -759,7 +759,20 @@ const DATA = [
       },
       {
         name: "양모",
-        places: [],
+        places: [
+          {
+            name: "울랜드",
+            mapsQuery: "Wooland near McDonald's, Minchinbury NSW 2770",
+          },
+          {
+            name: "스미스 필드 양모",
+            mapsQuery: "193-197 Warren Rd, Smithfield NSW",
+          },
+          {
+            name: "실버워터 양모",
+            mapsQuery: "2 Vore St, Silverwater NSW",
+          },
+        ],
       },
       {
         name: "제약",
