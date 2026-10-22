@@ -863,7 +863,12 @@ const DATA = [
     subs: [
       {
         name: "벤 정비공장",
-        places: [],
+        places: [
+          {
+            name: "V $ G 모터 메카닉 리페어",
+            mapsQuery: "V & G Motor Mechanic Repairs, 21 Forrester St, Kingsgrove NSW 2208",
+          },
+        ],
       },
       {
         name: "회사",
