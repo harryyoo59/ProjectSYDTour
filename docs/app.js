@@ -488,7 +488,32 @@ const DATA = [
       },
       {
         name: "부페",
-        places: [],
+        places: [
+          {
+            name: "메릴랜드 RSL",
+            mapsQuery: "Merrylands RSL",
+          },
+          {
+            name: "루소 RSL",
+            mapsQuery: "루소 RSL Sydney",
+          },
+          {
+            name: "펜리스 RSL",
+            mapsQuery: "Penrith RSL",
+          },
+          {
+            name: "88부페",
+            mapsQuery: "88 Buffet Sydney",
+          },
+          {
+            name: "BBQ 시티부페",
+            mapsQuery: "BBQ City Buffet Sydney",
+          },
+          {
+            name: "스타시티 부페",
+            mapsQuery: "The Star Sydney Buffet",
+          },
+        ],
       },
     ],
   },
