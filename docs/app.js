@@ -847,7 +847,12 @@ const DATA = [
       },
       {
         name: "코치 검사",
-        places: [],
+        places: [
+          {
+            name: "서비스 NSW",
+            mapsQuery: "15 River St, Silverwater NSW",
+          },
+        ],
       },
       {
         name: "버스 수리",
