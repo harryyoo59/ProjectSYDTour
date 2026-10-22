@@ -480,11 +480,7 @@ const DATA = [
         ],
       },
       {
-        name: "혼스비",
-        places: [],
-      },
-      {
-        name: "에핑지역",
+        name: "혼스비. 에핑 지역",
         places: [],
       },
       {
