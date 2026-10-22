@@ -795,10 +795,6 @@ const DATA = [
         name: "잡화",
         places: [
           {
-            name: "로얄 시드니 면세점 SDF",
-            mapsQuery: "136 Liverpool St, Sydney NSW 2000",
-          },
-          {
             name: "시드니 듀티 프리 SDF",
             mapsQuery: "136 Liverpool St, Sydney NSW",
           },
