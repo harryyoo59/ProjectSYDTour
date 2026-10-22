@@ -386,7 +386,7 @@ const DATA = [
           },
           {
             name: "리플스",
-            mapsQuery: "Ripples Sydney",
+            mapsQuery: "Ripples Australian National Maritime Museum",
           },
           {
             name: "시나 마리나",
