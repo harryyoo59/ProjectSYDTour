@@ -717,7 +717,23 @@ const DATA = [
           },
         ],
       },
-      { name: "뉴카슬.나우라", places: [] },
+      {
+        name: "뉴카슬.나우라",
+        places: [
+          {
+            name: "더 게이트웨이 뉴카슬",
+            mapsQuery: "The Gateway Inn Newcastle",
+          },
+          {
+            name: "머큐어 뉴카슬",
+            mapsQuery: "Mercure Newcastle",
+          },
+          {
+            name: "아처 호텔 나우라",
+            mapsQuery: "Archer Hotel Nowra",
+          },
+        ],
+      },
     ],
   },
   {
