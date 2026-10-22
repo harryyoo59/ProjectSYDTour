@@ -95,6 +95,14 @@ const DATA = [
             name: "본다이비치",
             mapsQuery: "Bondi Beach",
           },
+          {
+            name: "브론테 비치",
+            mapsQuery: "Bronte Beach Sydney",
+          },
+          {
+            name: "캠프 코브 비치",
+            mapsQuery: "Camp Cove Beach Sydney",
+          },
         ],
       },
       {
