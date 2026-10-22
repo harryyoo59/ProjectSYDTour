@@ -521,7 +521,35 @@ const DATA = [
     id: "hotel",
     name: "호텔",
     subs: [
-      { name: "시티.공항", places: [] },
+      {
+        name: "시티.공항",
+        places: [
+          {
+            name: "노보텔 에어포트",
+            mapsQuery: "Novotel Sydney Airport",
+          },
+          {
+            name: "목시 에어포트",
+            mapsQuery: "Moxy Sydney Airport",
+          },
+          {
+            name: "노보텔 브라이트 레 샌드",
+            mapsQuery: "Novotel Brighton-le-Sands",
+          },
+          {
+            name: "크라운 플라자 공항",
+            mapsQuery: "Crowne Plaza Sydney Airport",
+          },
+          {
+            name: "아이비스 공항",
+            mapsQuery: "ibis Sydney Airport",
+          },
+          {
+            name: "트레블로지 공항",
+            mapsQuery: "Travelodge Hotel Sydney Airport",
+          },
+        ],
+      },
       { name: "아타몬. 노스라이드", places: [] },
       { name: "올림픽 팍. 맥콰리 팍", places: [] },
       { name: "파라마타. 뱅스타운", places: [] },
