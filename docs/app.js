@@ -216,7 +216,32 @@ const DATA = [
       },
       {
         name: "포트 스테판",
-        places: [],
+        places: [
+          {
+            name: "와용 휴게소",
+            mapsQuery: "Wyong Rest Area",
+          },
+          {
+            name: "오크 베일 동물원",
+            mapsQuery: "Oakvale Wildlife Park Port Stephens",
+          },
+          {
+            name: "B 팜 머레이",
+            mapsQuery: "B Farm Murray Port Stephens",
+          },
+          {
+            name: "안나 베이",
+            mapsQuery: "Anna Bay NSW",
+          },
+          {
+            name: "넬슨 베이",
+            mapsQuery: "Nelson Bay NSW",
+          },
+          {
+            name: "엠폴 푸더리",
+            mapsQuery: "Ample Fudgery Nelson Bay",
+          },
+        ],
       },
       {
         name: "헌터스 벨리",
