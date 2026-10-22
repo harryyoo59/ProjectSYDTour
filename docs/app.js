@@ -438,7 +438,24 @@ const DATA = [
       },
       {
         name: "혼스비. 에핑 지역",
-        places: [],
+        places: [
+          {
+            name: "비원 혼스비",
+            mapsQuery: "비원 Hornsby",
+          },
+          {
+            name: "토르",
+            mapsQuery: "토르 Hornsby Epping",
+          },
+          {
+            name: "갈비 하우스",
+            mapsQuery: "갈비 하우스 Hornsby",
+          },
+          {
+            name: "먼데이 모닝 카페",
+            mapsQuery: "Monday Morning Cafe Hornsby",
+          },
+        ],
       },
       {
         name: "불루마운틴(펜리스.블랙타운)",
