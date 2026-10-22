@@ -256,7 +256,7 @@ const DATA = [
           },
           {
             name: "헌터 밸리 와이너리",
-            mapsQuery: "Hunter Valley Winery",
+            mapsQuery: "Mistletoe Lane & Hermitage Road Pokolbin",
           },
         ],
       },
