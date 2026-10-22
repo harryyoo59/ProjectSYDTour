@@ -631,7 +631,43 @@ const DATA = [
           },
         ],
       },
-      { name: "파라마타. 뱅스타운", places: [] },
+      {
+        name: "파라마타. 뱅스타운",
+        places: [
+          {
+            name: "리지스 뱅스타운",
+            mapsQuery: "Rydges Bankstown",
+          },
+          {
+            name: "머큐어 뱅스타운",
+            mapsQuery: "Mercure Sydney Bankstown",
+          },
+          {
+            name: "리지스 파라마타",
+            mapsQuery: "Rydges Parramatta",
+          },
+          {
+            name: "머큐어 파라마타",
+            mapsQuery: "Mercure Sydney Parramatta",
+          },
+          {
+            name: "맨트라 파라마타",
+            mapsQuery: "Mantra Parramatta",
+          },
+          {
+            name: "홀리데이인 파라마타",
+            mapsQuery: "Holiday Inn Parramatta",
+          },
+          {
+            name: "노보텔 파라마타",
+            mapsQuery: "Novotel Sydney Parramatta",
+          },
+          {
+            name: "파크로얄 파라마타",
+            mapsQuery: "Parkroyal Parramatta",
+          },
+        ],
+      },
       { name: "카브라마타,워릭팜", places: [] },
       { name: "블랙타운.이스턴 클릭", places: [] },
       { name: "벨라비스타.노웨스트", places: [] },
