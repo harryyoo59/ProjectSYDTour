@@ -459,7 +459,28 @@ const DATA = [
       },
       {
         name: "불루마운틴(펜리스.블랙타운)",
-        places: [],
+        places: [
+          {
+            name: "커피클럽 네피안 리버",
+            mapsQuery: "Coffee Club Nepean River Penrith",
+          },
+          {
+            name: "라샤의 팬니스",
+            mapsQuery: "라샤의 펜리스 Penrith",
+          },
+          {
+            name: "에버튼",
+            mapsQuery: "Everton Penrith Blacktown",
+          },
+          {
+            name: "마운틴코",
+            mapsQuery: "Mountain Co Blue Mountains",
+          },
+          {
+            name: "팔레 로얄",
+            mapsQuery: "Palais Royal Penrith",
+          },
+        ],
       },
       {
         name: "부페",
