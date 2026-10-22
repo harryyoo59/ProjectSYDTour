@@ -408,8 +408,25 @@ const DATA = [
         ],
       },
       {
-        name: "실버워터 웨스트라이드",
-        places: [],
+        name: "실버 워터. 웨스트 라이드",
+        places: [
+          {
+            name: "K푸드 초이스",
+            mapsQuery: "K Food Choice Silverwater",
+          },
+          {
+            name: "우마미마미",
+            mapsQuery: "Umami Mami West Ryde",
+          },
+          {
+            name: "함지박 웨스트 라이드",
+            mapsQuery: "함지박 West Ryde",
+          },
+          {
+            name: "원티드 치킨",
+            mapsQuery: "Wanted Chicken West Ryde",
+          },
+        ],
       },
       {
         name: "혼스비",
