@@ -689,7 +689,19 @@ const DATA = [
           },
         ],
       },
-      { name: "블랙타운.이스턴 클릭", places: [] },
+      {
+        name: "블랙타운.이스턴 클릭",
+        places: [
+          {
+            name: "에투라 블랙타운",
+            mapsQuery: "Atura Blacktown",
+          },
+          {
+            name: "알파 호텔 이스턴 클릭",
+            mapsQuery: "Alpha Hotel Eastern Creek",
+          },
+        ],
+      },
       { name: "벨라비스타.노웨스트", places: [] },
       { name: "웨스트 HQ. 펜리스.리버플", places: [] },
       { name: "뉴카슬.나우라", places: [] },
