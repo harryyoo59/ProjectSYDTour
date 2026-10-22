@@ -179,7 +179,40 @@ const DATA = [
     subs: [
       {
         name: "불루 마운틴",
-        places: [],
+        places: [
+          {
+            name: "시닉",
+            mapsQuery: "Scenic World Blue Mountains",
+          },
+          {
+            name: "누라 마을",
+            mapsQuery: "Leura Village Blue Mountains",
+          },
+          {
+            name: "보어스 락",
+            mapsQuery: "Boars Head Rock Blue Mountains",
+          },
+          {
+            name: "카힐스룩아웃",
+            mapsQuery: "Cahills Lookout Blue Mountains",
+          },
+          {
+            name: "엘시언 룩아웃",
+            mapsQuery: "Olympian Lookout Blue Mountains",
+          },
+          {
+            name: "린콜스 락",
+            mapsQuery: "Lincolns Rock Blue Mountains",
+          },
+          {
+            name: "웬트워스 폴",
+            mapsQuery: "Wentworth Falls Lookout",
+          },
+          {
+            name: "웬트워스 폭포",
+            mapsQuery: "Wentworth Falls waterfall",
+          },
+        ],
       },
       {
         name: "포트 스테판",
