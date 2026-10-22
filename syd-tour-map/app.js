@@ -828,6 +828,14 @@ const DATA = [
             name: "로얄 시그니 면세점 SDF",
             mapsQuery: "136 Liverpool St, Sydney NSW 2000",
           },
+          {
+            name: "바이오",
+            mapsQuery: "31 Maddox St, Alexandria NSW",
+          },
+          {
+            name: "아이시스",
+            mapsQuery: "195 Botany Rd, Waterloo NSW 2017",
+          },
         ],
       },
       {
