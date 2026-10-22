@@ -722,7 +722,19 @@ const DATA = [
           },
         ],
       },
-      { name: "벨라비스타.노웨스트", places: [] },
+      {
+        name: "벨라비스타.노웨스트",
+        places: [
+          {
+            name: "퀘스트 벨라 비스타",
+            mapsQuery: "Quest Bella Vista",
+          },
+          {
+            name: "비시 디어 노웨스트",
+            mapsQuery: "Visy Dior Hotel Norwest",
+          },
+        ],
+      },
       { name: "웨스트 HQ. 펜리스.리버플", places: [] },
       { name: "뉴카슬.나우라", places: [] },
     ],
