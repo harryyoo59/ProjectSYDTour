@@ -593,7 +593,19 @@ const DATA = [
           },
         ],
       },
-      { name: "아타몬. 노스라이드", places: [] },
+      {
+        name: "아타몬. 노스라이드",
+        places: [
+          {
+            name: "로열 퍼시픽",
+            mapsQuery: "Royal Pacific Hotel Artarmon",
+          },
+          {
+            name: "옥스 노스라이드",
+            mapsQuery: "Oaks Northside Hotel Sydney",
+          },
+        ],
+      },
       { name: "올림픽 팍. 맥콰리 팍", places: [] },
       { name: "파라마타. 뱅스타운", places: [] },
       { name: "카브라마타,워릭팜", places: [] },
