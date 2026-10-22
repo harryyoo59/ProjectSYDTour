@@ -400,7 +400,12 @@ const DATA = [
       },
       {
         name: "파라마타",
-        places: [],
+        places: [
+          {
+            name: "사리원",
+            mapsQuery: "사리원 Parramatta",
+          },
+        ],
       },
       {
         name: "실버워터 웨스트라이드",
