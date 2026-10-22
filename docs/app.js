@@ -782,10 +782,6 @@ const DATA = [
             mapsQuery: "Pure Australia Sydney",
           },
           {
-            name: "로얄 시그니 면세점 SDF",
-            mapsQuery: "136 Liverpool St, Sydney NSW 2000",
-          },
-          {
             name: "바이오",
             mapsQuery: "31 Maddox St, Alexandria NSW",
           },
@@ -797,7 +793,12 @@ const DATA = [
       },
       {
         name: "잡화",
-        places: [],
+        places: [
+          {
+            name: "로얄 시드니 면세점 SDF",
+            mapsQuery: "136 Liverpool St, Sydney NSW 2000",
+          },
+        ],
       },
     ],
   },
