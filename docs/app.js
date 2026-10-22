@@ -742,7 +742,20 @@ const DATA = [
     subs: [
       {
         name: "동물원",
-        places: [],
+        places: [
+          {
+            name: "시드니 주",
+            mapsQuery: "Sydney Zoo",
+          },
+          {
+            name: "페더데일",
+            mapsQuery: "Featherdale Wildlife Park",
+          },
+          {
+            name: "캄슬리 시티 팜",
+            mapsQuery: "Calmsley Hill City Farm",
+          },
+        ],
       },
       {
         name: "양모",
