@@ -674,6 +674,10 @@ const DATA = [
             mapsQuery: "Atura Blacktown",
           },
           {
+            name: "머큐어 블랙타운",
+            mapsQuery: "Mercure Blacktown",
+          },
+          {
             name: "알파 호텔 이스턴 클릭",
             mapsQuery: "Alpha Hotel Eastern Creek",
           },
