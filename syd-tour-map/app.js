@@ -606,7 +606,31 @@ const DATA = [
           },
         ],
       },
-      { name: "올림픽 팍. 맥콰리 팍", places: [] },
+      {
+        name: "올림픽 팍. 맥콰리 팍",
+        places: [
+          {
+            name: "폴먼 올림픽 팍",
+            mapsQuery: "Pullman Sydney Olympic Park",
+          },
+          {
+            name: "노보텔 올림픽 팍",
+            mapsQuery: "Novotel Sydney Olympic Park",
+          },
+          {
+            name: "크라운 플라자 멕쿼리 팍",
+            mapsQuery: "Crowne Plaza Sydney Macquarie Park",
+          },
+          {
+            name: "홀리데이인 익스프레스멕쿼리 팍",
+            mapsQuery: "Holiday Inn Express Sydney Macquarie Park",
+          },
+          {
+            name: "머큐어 멕쿼리 팍",
+            mapsQuery: "Mercure Sydney Macquarie Park",
+          },
+        ],
+      },
       { name: "파라마타. 뱅스타운", places: [] },
       { name: "카브라마타,워릭팜", places: [] },
       { name: "블랙타운.이스턴 클릭", places: [] },
