@@ -104,7 +104,7 @@ const DATA = [
             mapsQuery: "Shelly Beach Manly",
           },
           {
-            name: "사우 스테인 메디컬 센터",
+            name: "사우스 스테인 메디컬 센터",
             mapsQuery: "South Steyne Medical Centre Manly",
           },
           {
