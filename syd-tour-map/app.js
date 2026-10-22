@@ -881,7 +881,12 @@ const DATA = [
       },
       {
         name: "금호 타이어",
-        places: [],
+        places: [
+          {
+            name: "보쉬 카 서비스",
+            mapsQuery: "1-5 Vore St, Silverwater NSW",
+          },
+        ],
       },
       {
         name: "코치 검사",
