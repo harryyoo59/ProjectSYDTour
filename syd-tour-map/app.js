@@ -448,6 +448,14 @@ const DATA = [
             name: "사리원",
             mapsQuery: "사리원 Parramatta",
           },
+          {
+            name: "마마 짱",
+            mapsQuery: "마마 짱 Parramatta",
+          },
+          {
+            name: "코리안 프라이드 치킨",
+            mapsQuery: "Korean Fried Chicken Parramatta",
+          },
         ],
       },
       {
