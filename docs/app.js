@@ -1015,6 +1015,12 @@ function render() {
       </div>
       <p class="screen-notice">모든 경로는 유료도로 포함 최단·빠른길로 바로 안내합니다</p>
       <p class="screen-notice">이 목적지는 25인승 버스 기준으로 안내하는 것으로, 해당 차량이 아닌 경우 목적지 주변에서 다시 살펴보기 바랍니다</p>
+      <section class="chamzone-credit" aria-label="ChamZone Interactive">
+        <div class="chamzone-credit-row">
+          <img class="chamzone-credit-icon" src="./chamzone-icon.png" alt="" width="40" height="40" decoding="async" />
+          <img class="chamzone-credit-logo" src="./chamzone-logo.png" alt="ChamZone Interactive" width="200" height="36" decoding="async" />
+        </div>
+      </section>
     `;
     screenEl.querySelectorAll("[data-cat]").forEach((btn) => {
       btn.addEventListener("click", () => {

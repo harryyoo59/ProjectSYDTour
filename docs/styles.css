@@ -480,3 +480,43 @@ body {
     box-shadow: none;
   }
 }
+
+/* 로비 맨 아래 — 창고 「소설가와 같은 회사 로고」 원본 복사본 */
+.chamzone-credit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 12px;
+  padding: 8px 4px 16px;
+}
+
+.chamzone-credit-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.chamzone-credit-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.chamzone-credit-logo {
+  display: block;
+  flex: 1 1 auto;
+  width: auto;
+  max-width: calc(100% - 48px);
+  height: 36px;
+  object-fit: contain;
+  object-position: left center;
+}
