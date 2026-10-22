@@ -591,6 +591,26 @@ const DATA = [
             name: "트레블로지 공항",
             mapsQuery: "Travelodge Hotel Sydney Airport",
           },
+          {
+            name: "아모라 자미슨 호텔",
+            mapsQuery: "Amora Hotel Jamison Sydney",
+          },
+          {
+            name: "그레이스 호텔",
+            mapsQuery: "The Grace Hotel Sydney",
+          },
+          {
+            name: "레디슨 블루 프라자",
+            mapsQuery: "Radisson Blu Plaza Hotel Sydney",
+          },
+          {
+            name: "푸라마 달링 하버",
+            mapsQuery: "Pullman Sydney Darling Harbour",
+          },
+          {
+            name: "노스 시드니 하버뷰 호텔",
+            mapsQuery: "North Sydney Harbourview Hotel",
+          },
         ],
       },
       {
