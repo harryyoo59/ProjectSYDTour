@@ -5,15 +5,16 @@ alwaysApply: true
 
 # 【강력 규칙 · 무조건】 작업 시작 — 컴퓨터 화면
 
-**ProjectH · ProjectNL · ProjectSYDTour 공통.** 다른 어떤 일보다 **먼저**, **매 대화·매 작업** 시작 시 **반드시** 실행한다. 질문만 와도 **생략 금지**.
+**ProjectH · ProjectNL · ProjectSYDTour · cz assets 공통.** 다른 어떤 일보다 **먼저**, **매 대화·매 작업** 시작 시 **반드시** 실행한다. 질문만 와도 **생략 금지**.
 
 ## 사이트 주소 (프로젝트별)
 
 | 프로젝트 | 옆에 띄울 주소 |
 |----------|----------------|
+| cz assets | https://chamzone-assets.vercel.app |
 | ProjectNL | https://www.kainovelist.com |
-| ProjectH | https://project-h-fawn.vercel.app |
-| ProjectSYDTour | (올리면 여기 주소 적기 · 올리기 전엔 이 폴더 미리보기) |
+| ProjectH | https://www.data3kd.com |
+| ProjectSYDTour | https://harrysydtour.vercel.app |
 
 **현재 작업 중인 프로젝트**의 주소를 연다.
 
@@ -38,7 +39,7 @@ alwaysApply: true
 - 「나중에 띄울게요」
 - 옆 화면을 넓은 PC 화면으로 띄우기
 - 「컴퓨터」를 넓은 PC 화면과 섞어 말하기
-- 세 프로젝트 중 **한쪽만** 이 규칙 적용
+- 위 프로젝트 중 **한쪽만** 이 규칙 적용
 
 ## 예외
 
