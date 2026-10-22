@@ -287,7 +287,32 @@ const DATA = [
       },
       {
         name: "울릉공(카이야마)",
-        places: [],
+        places: [
+          {
+            name: "발드힐 룩 아웃",
+            mapsQuery: "Bald Hill Lookout Stanwell Park",
+          },
+          {
+            name: "하버사이드 수산식당",
+            mapsQuery: "Harbourside Seafood Restaurant Wollongong",
+          },
+          {
+            name: "울릉공 플래그 스태프 등대",
+            mapsQuery: "Flagstaff Hill Lighthouse Wollongong",
+          },
+          {
+            name: "난천사",
+            mapsQuery: "Nan Tien Temple Wollongong",
+          },
+          {
+            name: "카이아마 등대",
+            mapsQuery: "Kiama Lighthouse",
+          },
+          {
+            name: "윈당 R S L",
+            mapsQuery: "Windang RSL",
+          },
+        ],
       },
       {
         name: "뉴카슬",
