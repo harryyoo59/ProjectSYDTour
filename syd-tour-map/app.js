@@ -88,12 +88,8 @@ const DATA = [
             mapsQuery: "Gap Park Sydney",
           },
           {
-            name: "더들리 페이지",
-            mapsQuery: "Dudley Page Reserve Dover Heights",
-          },
-          {
             name: "본다이비치",
-            mapsQuery: "Bondi Beach",
+            mapsQuery: "Bondi Beach Parking, Campbell Parade, Bondi Beach NSW 2026",
           },
           {
             name: "브론테 비치",
